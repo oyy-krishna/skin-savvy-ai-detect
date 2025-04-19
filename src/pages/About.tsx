@@ -1,4 +1,3 @@
-
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import { Card } from '@/components/ui/card';
@@ -16,7 +15,7 @@ const About = () => {
               About Skin Savvy
             </h1>
             <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
-              Our mission is to make early skin cancer detection accessible to everyone through advanced technology.
+              Our mission is to make early skin cancer detection accessible to everyone through innovative technology.
             </p>
           </div>
         </div>
@@ -32,7 +31,7 @@ const About = () => {
               </div>
               
               <p className="text-gray-600 mb-4">
-                Skin Savvy was created by a team of healthcare professionals and technology specialists who recognized that early detection is crucial for successful skin cancer treatment.
+                Skin Savvy was created by three passionate computer science students who recognized the potential of technology to make a significant impact in healthcare, particularly in early skin cancer detection.
               </p>
               
               <p className="text-gray-600 mb-4">
@@ -40,7 +39,7 @@ const About = () => {
               </p>
               
               <p className="text-gray-600">
-                While our technology is powerful, we emphasize that it is a screening tool, not a replacement for professional medical diagnosis. We work with dermatologists to continuously improve our system and ensure it serves as a helpful bridge to proper medical care.
+                While our technology is powerful, we emphasize that it is a screening tool, not a replacement for professional medical diagnosis. We collaborate with healthcare professionals to continuously improve our system and ensure it serves as a helpful bridge to proper medical care.
               </p>
             </Card>
             
@@ -93,25 +92,21 @@ const About = () => {
               </div>
               
               <p className="text-gray-600 mb-6">
-                SkinSavvy AI brings together experts from multiple disciplines to create a reliable and accessible skin cancer detection platform:
+                Skin Savvy brings together three talented individuals who combine their expertise in computer science, machine learning, and healthcare technology:
               </p>
               
               <ul className="space-y-4 text-gray-600">
                 <li className="flex gap-2">
-                  <span className="font-medium">Medical Advisors:</span>
-                  <span>Board-certified dermatologists who guide our model development and ensure medical accuracy</span>
+                  <span className="font-medium">Krishan:</span>
+                  <span>Project Lead and Full Stack Developer - Oversees the project development and implements the core features of our platform</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="font-medium">AI Researchers:</span>
-                  <span>Specialists in computer vision and medical image analysis who build and refine our algorithms</span>
+                  <span className="font-medium">Shreyansh:</span>
+                  <span>Machine Learning Engineer - Specializes in developing and optimizing our skin analysis algorithms</span>
                 </li>
                 <li className="flex gap-2">
-                  <span className="font-medium">Software Engineers:</span>
-                  <span>The team that creates the intuitive, accessible platform you're using now</span>
-                </li>
-                <li className="flex gap-2">
-                  <span className="font-medium">Patient Advocates:</span>
-                  <span>People with lived experience who ensure we're addressing real needs</span>
+                  <span className="font-medium">Yash:</span>
+                  <span>UI/UX Designer and Frontend Developer - Creates the intuitive user interface and ensures a seamless user experience</span>
                 </li>
               </ul>
             </Card>
@@ -120,7 +115,7 @@ const About = () => {
               <Shield className="h-10 w-10 text-medical-teal mx-auto mb-4" />
               <h3 className="text-xl font-bold mb-2">Our Commitment</h3>
               <p className="text-gray-600">
-                We're committed to improving skin health outcomes through accessible technology, education, and connecting users with professional care when needed. SkinSavvy AI is a tool for awareness and early detection—not a replacement for medical expertise.
+                We're committed to improving skin health outcomes through accessible technology, education, and connecting users with professional care when needed. Skin Savvy is a tool for awareness and early detection—not a replacement for medical expertise.
               </p>
             </div>
           </div>
