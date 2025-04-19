@@ -28,7 +28,7 @@ const EducationSection = () => {
                 (the skin cells that produce melanin pigment).
               </p>
               <img 
-                src="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/38/ds00575_-ds00190_im00944_r7_meladeskthu_jpg.jpg" 
+                src="https://www.cancer.org/content/dam/cancer-org/images/photographs/single-use/espresso/melanoma-skin-cancer-signs-symptoms-300x200.jpg" 
                 alt="Melanoma example"
                 className="w-full h-40 object-cover rounded-md mb-3" 
               />
@@ -44,7 +44,7 @@ const EducationSection = () => {
                 like the face and neck.
               </p>
               <img 
-                src="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/38/ds00925_-ds00839_im03453_r7_basalskindeskthu_jpg.jpg" 
+                src="https://www.cancer.org/content/dam/cancer-org/images/photographs/single-use/espresso/basal-cell-carcinoma-skin-cancer-300x200.jpg" 
                 alt="Basal cell carcinoma example"
                 className="w-full h-40 object-cover rounded-md mb-3" 
               />
@@ -60,7 +60,7 @@ const EducationSection = () => {
                 that make up the middle and outer layers of the skin.
               </p>
               <img 
-                src="https://www.mayoclinic.org/-/media/kcms/gbs/patient-consumer/images/2013/11/15/17/38/ds00924_-ds00820_im03456_r7_squamousskindeskthu_jpg.jpg" 
+                src="https://www.cancer.org/content/dam/cancer-org/images/photographs/single-use/espresso/squamous-cell-carcinoma-skin-cancer-300x200.jpg" 
                 alt="Squamous cell carcinoma example"
                 className="w-full h-40 object-cover rounded-md mb-3" 
               />
