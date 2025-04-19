@@ -13,10 +13,10 @@ const About = () => {
         <div className="bg-medical-lightBlue py-16">
           <div className="container mx-auto px-4">
             <h1 className="text-4xl font-bold text-center text-medical-text">
-              About SkinSavvy AI
+              About Skin Savvy
             </h1>
             <p className="text-center text-gray-600 mt-4 max-w-2xl mx-auto">
-              Our mission is to make early skin cancer detection accessible to everyone through artificial intelligence.
+              Our mission is to make early skin cancer detection accessible to everyone through advanced technology.
             </p>
           </div>
         </div>
@@ -32,15 +32,15 @@ const About = () => {
               </div>
               
               <p className="text-gray-600 mb-4">
-                SkinSavvy AI was created by a team of healthcare professionals, AI specialists, and people whose lives have been affected by skin cancer. We recognized that early detection is crucial for successful treatment, yet many people lack easy access to dermatological care.
+                Skin Savvy was created by a team of healthcare professionals and technology specialists who recognized that early detection is crucial for successful skin cancer treatment.
               </p>
               
               <p className="text-gray-600 mb-4">
-                Our platform uses advanced deep learning algorithms trained on thousands of medical images to help identify potential skin concerns. By making this technology widely available, we hope to encourage more people to monitor changes in their skin and seek professional medical care when needed.
+                Our platform uses advanced detection technologies to help identify potential skin concerns. By making this technology widely available, we hope to encourage more people to monitor changes in their skin and seek professional medical care when needed.
               </p>
               
               <p className="text-gray-600">
-                While our AI technology is powerful, we emphasize that it is a screening tool, not a replacement for professional medical diagnosis. We work with dermatologists to continuously improve our system and ensure it serves as a helpful bridge to proper medical care.
+                While our technology is powerful, we emphasize that it is a screening tool, not a replacement for professional medical diagnosis. We work with dermatologists to continuously improve our system and ensure it serves as a helpful bridge to proper medical care.
               </p>
             </Card>
             

@@ -1,4 +1,3 @@
-
 import { Heart, Mail, Shield } from "lucide-react";
 import { Link } from "react-router-dom";
 
@@ -10,10 +9,10 @@ const Footer = () => {
           <div className="md:col-span-1">
             <div className="flex items-center gap-2 mb-4">
               <Heart className="h-6 w-6 text-medical-danger" />
-              <span className="font-bold text-xl">SkinSavvy AI</span>
+              <span className="font-bold text-xl">Skin Savvy</span>
             </div>
             <p className="text-gray-600 text-sm">
-              Using AI to help detect potential skin cancer early, when it's most treatable.
+              Helping detect potential skin cancer early, when it's most treatable.
             </p>
             <div className="flex items-center gap-1 mt-4">
               <Shield className="h-4 w-4 text-medical-blue" />
@@ -99,7 +98,7 @@ const Footer = () => {
         <div className="mt-12 pt-6 border-t border-gray-200">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-gray-500">
-              &copy; {new Date().getFullYear()} SkinSavvy AI. All rights reserved.
+              &copy; {new Date().getFullYear()} Skin Savvy. All rights reserved.
             </p>
             <div className="flex gap-6 text-sm">
               <Link to="/privacy" className="text-gray-600 hover:text-medical-blue">

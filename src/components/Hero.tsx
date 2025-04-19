@@ -19,7 +19,7 @@ const Hero = () => {
             Early Detection <span className="text-medical-blue">Saves Lives</span>
           </h1>
           <p className="text-xl text-gray-600 mb-8">
-            Upload an image of your skin lesion and get an instant AI-powered assessment to help
+            Upload an image of your skin lesion and get an instant screening to help
             identify potential skin cancer concerns.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">

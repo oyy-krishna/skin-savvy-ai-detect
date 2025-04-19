@@ -17,7 +17,7 @@ const Header = () => {
       <div className="container mx-auto flex justify-between items-center py-4 px-4 md:px-6">
         <Link to="/" className="flex items-center gap-2">
           <Heart className="h-6 w-6 text-medical-danger" />
-          <span className="font-bold text-xl text-medical-text">SkinSavvy AI</span>
+          <span className="font-bold text-xl text-medical-text">Skin Savvy</span>
         </Link>
         
         <div className="hidden md:flex items-center gap-6">
