@@ -1,73 +1,89 @@
-# Welcome to your Lovable project
+# Skin Savvy AI Detect
 
-## Project info
+![Skin Savvy AI Detect](https://raw.githubusercontent.com/oyy-krishna/skin-savvy-ai-detect/main/assets/logo.png)
 
-**URL**: https://lovable.dev/projects/599d4c30-5c22-497b-8c82-73c0f642f524
+**Skin Savvy AI Detect** is an AI-powered web application designed to assist in the early detection of skin cancer. By leveraging deep learning techniques, the application analyzes uploaded skin lesion images and predicts whether they are benign or malignant. This tool aims to provide users with a preliminary assessment, promoting timely medical consultations.
 
-## How can I edit this code?
+## 🚀 Live Demo
 
-There are several ways of editing your application.
+Experience the application live: [Skin Savvy AI Detect](https://skin-savvy-ai-detect.lovable.app/)
 
-**Use Lovable**
+## 🧠 Features
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/599d4c30-5c22-497b-8c82-73c0f642f524) and start prompting.
+- **Image Upload**: Users can upload images of skin lesions for analysis.
+- **AI Prediction**: Utilizes Convolutional Neural Networks (CNNs) to classify lesions.
+- **Grad-CAM Visualization**: Highlights areas of the image that influenced the prediction.
+- **User-Friendly Interface**: Intuitive design for easy navigation and use.
+- **Responsive Design**: Compatible with various devices, including desktops and mobiles.
 
-Changes made via Lovable will be committed automatically to this repo.
+## 📸 Screenshots
 
-**Use your preferred IDE**
+![Upload Interface](https://raw.githubusercontent.com/oyy-krishna/skin-savvy-ai-detect/main/assets/upload_interface.png)
+*Upload your skin lesion image.*
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+![Prediction Result](https://raw.githubusercontent.com/oyy-krishna/skin-savvy-ai-detect/main/assets/prediction_result.png)
+*View the AI's prediction and visualization.*
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+## 🛠️ Technologies Used
 
-Follow these steps:
+- **Frontend**: TypeScript, React, Tailwind CSS, shadcn-ui
+- **Backend**: Flask (Python)
+- **Machine Learning**: TensorFlow, Keras
+- **Model Architecture**: EfficientNetB0
+- **Visualization**: Grad-CAM for heatmap generation
+- **Deployment**: Lovable Platform
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+## 📂 Dataset
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+The model was trained using the [ISIC 2020: Skin Lesion Analysis Towards Melanoma Detection](https://www.kaggle.com/c/siim-isic-melanoma-classification) dataset, which contains a large collection of dermoscopic images labeled for melanoma classification.
 
-# Step 3: Install the necessary dependencies.
-npm i
+## 🧪 Installation & Setup (Local Development)
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/oyy-krishna/skin-savvy-ai-detect.git
+   cd skin-savvy-ai-detect
+   ```
 
-**Edit a file directly in GitHub**
+2. **Install Node.js dependencies**:
+   ```bash
+   npm i
+   ```
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+3. **Start the development server**:
+   ```bash
+   npm run dev
+   ```
 
-**Use GitHub Codespaces**
+## 🔢 Alternative Setup (Flask + ML Backend)
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+1. Create a Python virtual environment:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
 
-## What technologies are used for this project?
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-This project is built with:
+3. Run the Flask server:
+   ```bash
+   python app.py
+   ```
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+4. Open your browser and navigate to `http://localhost:5000`
 
-## How can I deploy this project?
+## 🔖 Disclaimer
 
-Simply open [Lovable](https://lovable.dev/projects/599d4c30-5c22-497b-8c82-73c0f642f524) and click on Share -> Publish.
+This application is intended for educational and informational purposes only. It is not a substitute for professional medical advice, diagnosis, or treatment. Always consult a qualified healthcare provider with any questions regarding medical conditions.
 
-## Can I connect a custom domain to my Lovable project?
+## 📢 Contact
 
-Yes, you can!
+For questions or feedback, feel free to reach out via [GitHub](https://github.com/oyy-krishna/skin-savvy-ai-detect/issues).
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/tips-tricks/custom-domain#step-by-step-guide)
+**Project deployed via Lovable:** [Lovable Project Link](https://lovable.dev/projects/599d4c30-5c22-497b-8c82-73c0f642f524)
+
