@@ -1,6 +1,7 @@
+
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Upload, X, Image as ImageIcon, Loader2, Body } from "lucide-react";
+import { Upload, X, Image as ImageIcon, Loader2, Heart, Microscope } from "lucide-react";
 import { useState, useRef } from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
 
@@ -93,7 +94,7 @@ const ImageUpload = ({ onImageSelect, onAnalyze, isAnalyzing = false }: ImageUpl
       <div className="mb-6 space-y-4">
         <div className="bg-medical-lightBlue/20 p-4 rounded-lg">
           <div className="flex items-center gap-2 mb-2">
-            <Body className="h-5 w-5 text-medical-blue" />
+            <Microscope className="h-5 w-5 text-medical-blue" />
             <h3 className="font-semibold text-medical-blue">Image Requirements:</h3>
           </div>
           <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
@@ -105,7 +106,7 @@ const ImageUpload = ({ onImageSelect, onAnalyze, isAnalyzing = false }: ImageUpl
 
         <div className="bg-medical-lightTeal/20 p-4 rounded-lg">
           <div className="flex items-center gap-2 mb-2">
-            <Body className="h-5 w-5 text-medical-teal" />
+            <Heart className="h-5 w-5 text-medical-teal" />
             <h3 className="font-semibold text-medical-teal">Recommended Body Areas:</h3>
           </div>
           <ul className="list-disc list-inside text-sm text-gray-600 space-y-1">
