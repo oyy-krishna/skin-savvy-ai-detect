@@ -1,6 +1,5 @@
 # Skin Savvy AI Detect
 
-![Skin Savvy AI Detect](https://raw.githubusercontent.com/oyy-krishna/skin-savvy-ai-detect/main/assets/logo.png)
 
 **Skin Savvy AI Detect** is an AI-powered web application designed to assist in the early detection of skin cancer. By leveraging deep learning techniques, the application analyzes uploaded skin lesion images and predicts whether they are benign or malignant. This tool aims to provide users with a preliminary assessment, promoting timely medical consultations.
 
@@ -18,10 +17,10 @@ Experience the application live: [Skin Savvy AI Detect](https://skin-savvy-ai-de
 
 ## 📸 Screenshots
 
-![Upload Interface](https://raw.githubusercontent.com/oyy-krishna/skin-savvy-ai-detect/main/assets/upload_interface.png)
+![Upload Interface](https://raw.githubusercontent.com/oyy-krishna/skin-savvy-ai-detect/public/upload.png)
 *Upload your skin lesion image.*
 
-![Prediction Result](https://raw.githubusercontent.com/oyy-krishna/skin-savvy-ai-detect/main/assets/prediction_result.png)
+![Prediction Result](https://raw.githubusercontent.com/oyy-krishna/skin-savvy-ai-detect/public/result.png)
 *View the AI's prediction and visualization.*
 
 ## 🛠️ Technologies Used
