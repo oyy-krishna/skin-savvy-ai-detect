@@ -1,4 +1,3 @@
-
 import { useState } from 'react';
 import Header from '@/components/Header';
 import Hero from '@/components/Hero';
@@ -7,6 +6,7 @@ import ResultsDisplay, { ResultsType } from '@/components/ResultsDisplay';
 import EducationSection from '@/components/EducationSection';
 import FindDoctor from '@/components/FindDoctor';
 import Footer from '@/components/Footer';
+import ChatBot from '@/components/ChatBot';
 import useImageClassification from '@/hooks/useImageClassification';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { AlertCircle, Loader2 } from 'lucide-react';
@@ -86,6 +86,7 @@ const Index = () => {
       </main>
       
       <Footer />
+      <ChatBot />
     </div>
   );
 };
