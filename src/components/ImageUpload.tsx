@@ -1,9 +1,9 @@
-
 import { Button } from "@/components/ui/button";
 import { Card } from "@/components/ui/card";
-import { Upload, X, Image as ImageIcon, Loader2, Heart, Microscope } from "lucide-react";
+import { Upload, X, Image as ImageIcon, Loader2, Heart, Microscope, Camera } from "lucide-react";
 import { useState, useRef } from "react";
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from "@/components/ui/tooltip";
+import WebcamCapture from "./WebcamCapture";
 
 type ImageUploadProps = {
   onImageSelect: (image: File) => void;
@@ -14,6 +14,7 @@ type ImageUploadProps = {
 const ImageUpload = ({ onImageSelect, onAnalyze, isAnalyzing = false }: ImageUploadProps) => {
   const [preview, setPreview] = useState<string | null>(null);
   const [isDragging, setIsDragging] = useState(false);
+  const [showWebcam, setShowWebcam] = useState(false);
   const fileInputRef = useRef<HTMLInputElement>(null);
 
   const imageRequirements = [
@@ -87,6 +88,17 @@ const ImageUpload = ({ onImageSelect, onAnalyze, isAnalyzing = false }: ImageUpl
     }
   };
 
+  const handleWebcamCapture = (imageSrc: string) => {
+    fetch(imageSrc)
+      .then((res) => res.blob())
+      .then((blob) => {
+        const file = new File([blob], "webcam-capture.jpg", { type: "image/jpeg" });
+        onImageSelect(file);
+        setPreview(imageSrc);
+        setShowWebcam(false);
+      });
+  };
+
   return (
     <Card className="p-6" id="upload-section">
       <h2 className="text-2xl font-bold text-center mb-4">Upload Skin Image</h2>
@@ -117,44 +129,64 @@ const ImageUpload = ({ onImageSelect, onAnalyze, isAnalyzing = false }: ImageUpl
         </div>
       </div>
 
-      {!preview ? (
-        <TooltipProvider>
-          <Tooltip>
-            <TooltipTrigger asChild>
-              <div
-                onDragOver={handleDragOver}
-                onDragLeave={handleDragLeave}
-                onDrop={handleDrop}
-                className={`border-2 border-dashed rounded-lg p-8 text-center transition-all cursor-pointer ${
-                  isDragging ? "border-medical-blue bg-medical-lightBlue" : "border-gray-300"
-                }`}
-                onClick={handleButtonClick}
-              >
-                <input
-                  type="file"
-                  ref={fileInputRef}
-                  onChange={handleFileChange}
-                  accept="image/*"
-                  className="hidden"
-                />
-                <div className="flex flex-col items-center gap-4">
-                  <div className="bg-medical-lightBlue rounded-full p-4">
-                    <Upload className="h-8 w-8 text-medical-blue" />
-                  </div>
-                  <div>
-                    <p className="text-lg font-medium">Drag and drop or click to upload</p>
-                    <p className="text-sm text-gray-500 mt-1">
-                      Supported formats: JPG, PNG, WEBP (max 10MB)
-                    </p>
+      {!preview && !showWebcam ? (
+        <div className="space-y-4">
+          <TooltipProvider>
+            <Tooltip>
+              <TooltipTrigger asChild>
+                <div
+                  onDragOver={handleDragOver}
+                  onDragLeave={handleDragLeave}
+                  onDrop={handleDrop}
+                  className={`border-2 border-dashed rounded-lg p-8 text-center transition-all cursor-pointer ${
+                    isDragging ? "border-medical-blue bg-medical-lightBlue" : "border-gray-300"
+                  }`}
+                  onClick={handleButtonClick}
+                >
+                  <input
+                    type="file"
+                    ref={fileInputRef}
+                    onChange={handleFileChange}
+                    accept="image/*"
+                    className="hidden"
+                  />
+                  <div className="flex flex-col items-center gap-4">
+                    <div className="bg-medical-lightBlue rounded-full p-4">
+                      <Upload className="h-8 w-8 text-medical-blue" />
+                    </div>
+                    <div>
+                      <p className="text-lg font-medium">Drag and drop or click to upload</p>
+                      <p className="text-sm text-gray-500 mt-1">
+                        Supported formats: JPG, PNG, WEBP (max 10MB)
+                      </p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </TooltipTrigger>
-            <TooltipContent>
-              <p>Click or drag an image that meets the requirements above</p>
-            </TooltipContent>
-          </Tooltip>
-        </TooltipProvider>
+              </TooltipTrigger>
+              <TooltipContent>
+                <p>Click or drag an image that meets the requirements above</p>
+              </TooltipContent>
+            </Tooltip>
+          </TooltipProvider>
+          
+          <div className="text-center">
+            <span className="text-sm text-gray-500">or</span>
+          </div>
+          
+          <Button 
+            variant="outline" 
+            onClick={() => setShowWebcam(true)}
+            className="w-full py-6 flex items-center justify-center gap-2"
+          >
+            <Camera className="h-5 w-5" />
+            Use Webcam
+          </Button>
+        </div>
+      ) : showWebcam ? (
+        <WebcamCapture 
+          onCapture={handleWebcamCapture} 
+          onClose={() => setShowWebcam(false)}
+        />
       ) : (
         <div className="relative">
           <img
