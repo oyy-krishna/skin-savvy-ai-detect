@@ -3,7 +3,8 @@ import { useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { ScrollArea } from '@/components/ui/scroll-area';
-import { Bot, MessageCircle, X } from 'lucide-react';
+import { Bot, MessageCircle, X, Key } from 'lucide-react';
+import { Alert, AlertDescription } from '@/components/ui/alert';
 
 interface Message {
   text: string;
@@ -16,8 +17,22 @@ const ChatBot = () => {
     { text: "Hello! I'm here to help you with any questions about skin conditions, image requirements, or how to use our app. How can I assist you today?", isBot: true }
   ]);
   const [input, setInput] = useState('');
+  const [apiKey, setApiKey] = useState(localStorage.getItem('chatbot_api_key') || '');
+  const [showApiInput, setShowApiInput] = useState(!localStorage.getItem('chatbot_api_key'));
+
+  const handleApiKeySave = () => {
+    if (apiKey.trim()) {
+      localStorage.setItem('chatbot_api_key', apiKey);
+      setShowApiInput(false);
+    }
+  };
 
   const handleSend = () => {
+    if (!apiKey) {
+      setShowApiInput(true);
+      return;
+    }
+
     if (input.trim()) {
       // Add user message
       setMessages(prev => [...prev, { text: input, isBot: false }]);
@@ -63,6 +78,28 @@ const ChatBot = () => {
               <X className="h-5 w-5" />
             </Button>
           </div>
+          
+          {showApiInput && (
+            <div className="p-4 border-b">
+              <Alert>
+                <AlertDescription>
+                  Please enter your API key to use the chatbot.
+                </AlertDescription>
+              </Alert>
+              <div className="mt-2 flex gap-2">
+                <Input
+                  type="password"
+                  placeholder="Enter API Key"
+                  value={apiKey}
+                  onChange={(e) => setApiKey(e.target.value)}
+                />
+                <Button onClick={handleApiKeySave} className="whitespace-nowrap">
+                  <Key className="h-4 w-4 mr-2" />
+                  Save Key
+                </Button>
+              </div>
+            </div>
+          )}
           
           <ScrollArea className="h-96 p-4">
             <div className="space-y-4">
